@@ -1,0 +1,8 @@
+path: dataset
+
+train: train/images
+val: val/images
+
+nc: 2 
+
+names: ['with_mask', 'without_mask']
