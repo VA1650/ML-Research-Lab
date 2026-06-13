@@ -99,7 +99,7 @@ is_active_community: 0.0000
 ### 05-RNN-Legacy-Research
 * Sequence modeling with LSTM/GRU (Weather forecasting, Eq-solvers).
 * **Hall of Fame:** A collection of surrealist AI-generated text artifacts.
-* ![Stoybe Artifact](./05-RNN-Legacy-Research/rnn_chaos.jpg)
+ ![Stoybe Artifact](./05-RNN-Legacy-Research/rnn-chaos.jpg)
 * *Internal Note: "Critical Error stoybe deteted"*
 
 ### 06-Generative-Adversarial-Networks
