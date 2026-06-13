@@ -10,6 +10,7 @@ A comprehensive collection of machine learning experiments, ranging from core st
 
 ### 02-ML-Core-MNIST-Regression
 * **MNIST CNN Study:** Comparative analysis of optimizers (Adam vs. SGD) and architectural scalability.
+* **MNIST CNN & Real-Time** Inference Study: Comparative analysis of optimizers and a real-time digit recognition pipeline via OpenCV webcam stream.
 * **Auto MPG Prediction:** Multivariate regression analysis focused on fuel efficiency modeling.
 
 ### 03-Computer-Vision-Basics
