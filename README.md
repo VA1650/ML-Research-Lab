@@ -7,7 +7,76 @@ A comprehensive collection of machine learning experiments, ranging from core st
 ### 01-Classification-Visualisation
 * **Titanic: Survival Analysis** — Binary classification with deep Exploratory Data Analysis (EDA) and feature engineering.
 * **Digits (8x8):** Traditional multi-class classification using SVM and Random Forest.
+* **Student Risk Simulation Pipeline** — Assessing the robustness of nonlinear classification models (Decision Tree/ID3) on controlled synthetic data. The pipeline simulates students' multivariate academic risks, injects stochastic noise into the target variable, and verifies the decision tree's ability to extract deterministic rules (Decision Rules) through entropy/information gain estimation.
+<details>
+<summary>📊 View pipeline and Decision Rules logs</summary>
 
+```text
+[INFO] Class distribution:
+is_at_risk
+1 0.543333
+0 0.456667
+Name: proportion, dtype: float64
+
+=== Classification quality report ===
+precision recall f1-score support
+
+Stable 0.93 0.93 0.93 110
+At risk 0.94 0.94 0.94 130
+
+accuracy 0.93 240
+macro avg 0.93 0.93 0.93 240
+weighted avg 0.93 0.93 0.93 240
+
+=== Feature Importance ===
+attendance_pct: 0.4300
+failed_credits: 0.3003
+gpa: 0.2698
+is_active_community: 0.0000
+
+=== Extracted Decision Rules ===
+|--- attendance_pct <= 39.50
+| |--- gpa <= 4.71
+| | |--- attendance_pct <= 34.50
+| | | |--- gpa <= 2.14
+| | | | |--- class: 1
+| | | |--- gpa > 2.14
+| | | | | |--- class: 1
+| | |--- attendance_pct > 34.50
+| | | |--- class: 1
+| |--- gpa > 4.71
+| | |--- attendance_pct <= 25.50
+| | | |--- class: 1
+| | |--- attendance_pct > 25.50
+| | | |--- gpa <= 4.81
+| | | | |--- class: 0
+| | | |--- gpa > 4.81
+| | | | |--- class: 1
+|--- attendance_pct > 39.50
+| |--- gpa <= 3.49
+| | |--- failed_credits <= 1.50
+| | | |--- attendance_pct <= 80.00
+| | | | |--- class: 0
+| | | |--- attendance_pct > 80.00
+| | | | |--- class: 0
+| | |--- failed_credits > 1.50
+| | | |--- failed_credits <= 2.50
+| | | | |--- class: 1
+| | | |--- failed_credits > 2.50
+| | | | |--- class: 1
+| |--- gpa > 3.49
+| | |--- attendance_pct <= 85.50
+| | | |--- attendance_pct <= 71.50
+| | | | |--- class: 0
+| | | |--- attendance_pct > 71.50
+| | | | |--- class: 0
+| | |--- attendance_pct > 85.50
+| | | |--- gpa <= 4.58
+| | | | |--- class: 0
+| | | |--- gpa > 4.58
+| | | | |--- class: 0
+```
+</details>
 ### 02-ML-Core-MNIST-Regression
 * **MNIST CNN Study:** Comparative analysis of optimizers (Adam vs. SGD) and architectural scalability.
 * **MNIST CNN & Real-Time** Inference Study: Comparative analysis of optimizers and a real-time digit recognition pipeline via OpenCV webcam stream.
