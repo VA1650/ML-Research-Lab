@@ -4,9 +4,10 @@ A comprehensive collection of machine learning experiments, ranging from core st
 
 ## 📂 Repository Structure
 
-### 01-Classification-Visualisation
+### 01-ML-Core-Data-Analysis-Classification-Regression
 * **Titanic: Survival Analysis** — Binary classification with deep Exploratory Data Analysis (EDA) and feature engineering.
 * **Digits (8x8):** Traditional multi-class classification using SVM and Random Forest.
+* **University Rankings EDA Engine (CWUR)** — Исследовательский пайплайн макро-анализа качества мирового образования. Скрипт агрегирует метрики институтов по странам, фильтрует временные срезы и строит инвертированные многомерные диаграммы рассеяния (Scatter Plots), где пространственный масштаб точек завязан на итоговый скор рейтинга. Пайплайн включает автоматический расчет нелинейной ранговой корреляции Спирмена (`Spearman's rank correlation`) для верификации латентных зависимостей между влиянием академической среды и качеством преподавания.
 * **Student Risk Simulation Pipeline** — Assessing the robustness of nonlinear classification models (Decision Tree/ID3) on controlled synthetic data. The pipeline simulates students' multivariate academic risks, injects stochastic noise into the target variable, and verifies the decision tree's ability to extract deterministic rules (Decision Rules) through entropy/information gain estimation.
 <details>
 <summary>📊 View pipeline and Decision Rules logs</summary>
@@ -77,13 +78,14 @@ is_active_community: 0.0000
 | | | | |--- class: 0
 ```
 </details>
-### 02-ML-Core-MNIST-Regression
+### 02-ML-Core-Pipelines
 * **MNIST CNN Study:** Comparative analysis of optimizers (Adam vs. SGD) and architectural scalability.
 * **MNIST CNN & Real-Time** Inference Study: Comparative analysis of optimizers and a real-time digit recognition pipeline via OpenCV webcam stream.
 * **Auto MPG Prediction:** Multivariate regression analysis focused on fuel efficiency modeling.
 * **Heart Disease Classification Pipeline** — Medical screening of cardiovascular risks. Implemented using `Sklearn Pipeline` and `ColumnTransformer`. The architecture completely isolates the training context from the test one (`train/test leakage prevention`), performs dynamic encoding of categorical features via `OneHotEncoder` with protection against unknown values ​​(`handle_unknown='ignore'`), and implements regularized logistic inference.
 * **Student Performance Multi-Output Pipeline** — Forecasting the vector of student academic performance across three disciplines in parallel. The pipeline is built on the MultiOutputRegressor and linear models with L2 regularization (`Ridge`). Strict protection against the `Dummy Variable Trap` is implemented at the one-hot coding stage, feature scaling is performed, and a synchronous multivariate inference mechanism is deployed.
 * **Manifold Learning & Non-linear Dimension Reduction Study** — An experimental study of manifold topology based on the Isomap algorithm and the KNN classifier. The pipeline demonstrates the difference between metrics in the full 4D feature space and on an isolated 2D manifold. Strict separation of transformation phases (`fit_transform` on the train, `transform` on the test) is implemented to prevent data leakage through graph geodesic distances.
+* **YouTube Factor Analysis Pipeline (PCA)** — Factor analysis and dimensionality reduction of multidimensional media platform metrics. The script isolates highly correlated economic and social channel metrics (views, revenue, subscriptions), eliminates scale imbalances using StandardScaler, and projects data onto orthogonal principal component axes. Includes calculation of a loadings matrix for the mathematical interpretation of latent factors.
 
 ### 03-Computer-Vision-Basics
 * Fundamental image processing experiments and basic spatial transformations.
