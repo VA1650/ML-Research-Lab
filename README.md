@@ -78,6 +78,7 @@ is_active_community: 0.0000
 | | | | |--- class: 0
 ```
 </details>
+
 ### 02-ML-Core-Pipelines
 * **MNIST CNN Study:** Comparative analysis of optimizers (Adam vs. SGD) and architectural scalability.
 * **MNIST CNN & Real-Time** Inference Study: Comparative analysis of optimizers and a real-time digit recognition pipeline via OpenCV webcam stream.
