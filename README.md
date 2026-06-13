@@ -83,6 +83,7 @@ is_active_community: 0.0000
 * **Auto MPG Prediction:** Multivariate regression analysis focused on fuel efficiency modeling.
 * **Heart Disease Classification Pipeline** — Medical screening of cardiovascular risks. Implemented using `Sklearn Pipeline` and `ColumnTransformer`. The architecture completely isolates the training context from the test one (`train/test leakage prevention`), performs dynamic encoding of categorical features via `OneHotEncoder` with protection against unknown values ​​(`handle_unknown='ignore'`), and implements regularized logistic inference.
 * **Student Performance Multi-Output Pipeline** — Forecasting the vector of student academic performance across three disciplines in parallel. The pipeline is built on the MultiOutputRegressor and linear models with L2 regularization (`Ridge`). Strict protection against the `Dummy Variable Trap` is implemented at the one-hot coding stage, feature scaling is performed, and a synchronous multivariate inference mechanism is deployed.
+* **Manifold Learning & Non-linear Dimension Reduction Study** — An experimental study of manifold topology based on the Isomap algorithm and the KNN classifier. The pipeline demonstrates the difference between metrics in the full 4D feature space and on an isolated 2D manifold. Strict separation of transformation phases (`fit_transform` on the train, `transform` on the test) is implemented to prevent data leakage through graph geodesic distances.
 
 ### 03-Computer-Vision-Basics
 * Fundamental image processing experiments and basic spatial transformations.
