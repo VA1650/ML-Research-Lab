@@ -118,6 +118,39 @@ is_active_community: 0.0000
 * *Practical Application:* Automatically estimates the "breakthrough power" of tests for a given sample size. Avoids "underfitting" errors when the sample size is too small to detect a real change in the metric (effect).
 * *Research Insight:* The module visualizes the gap between statistical significance ($p$-value) and the power of a test. Proves that for a fixed $N=100$, to detect small effects (skill $1/5 \to 1/7$) one must either increase the sample or accept a high risk of type II error.
 
+### 09-Optimization-Lab
+* **Gradient Descent Step-Size Strategies Study** — A comparative analysis of the effectiveness of step size selection methods ($\alpha$) in convex optimization problems.
+* *Methods:* Three convergence strategies are implemented:
+1. **Constant Step:** A basic method requiring knowledge of the Lipschitz constant ($L$).
+2. **Polyak Step Size:** An adaptive method using knowledge of the optimal value of $f^*$, ensuring the fastest convergence.
+3. **Armijo Line Search:** An iterative step size search method that guarantees a "sufficiently reduced" function condition without requiring knowledge of the function's curvature parameters.
+* *Visualization:* The pipeline includes the generation of contour plots of optimization trajectories and the plotting of convergence curves on a logarithmic scale to monitor the rate of gradient decay.
+
+### 10-Ridge-Regression-Benchmark
+* **Ridge Regression: Analytical vs. Iterative Optimization** — A comparative study of methods for solving a linear regression problem with L2 regularization.
+* *Implemented methods:*
+1. **Analytical (Normal Equation):** Direct matrix solution via the pseudoinverse matrix.
+2. **Standard Gradient Descent:** Iterative minimization with direct calculation of the penalty gradient.
+3. **Proximal Gradient Descent:** Using the proximal operator (soft-thresholding for Ridge) for more efficient weight updates.
+* *Research Insight:* The code demonstrates the equivalence of iterative methods to the analytical solution and visualizes the convergence of the loss function. The implementation allows us to see how the regularization parameters $\lambda$ affect weight shrinkage and overfitting prevention.
+
+### 11-Sparsity-Optimization-Lab
+* **Sparse Optimization & LASSO Benchmarking** — Study of optimization methods for functions with nonsmooth terms ($L_1$-regularization).
+* *Implemented approaches:*
+1. **Subgradient Method:** Direct use of the subgradient for a nonsmooth function (slow convergence).
+2. **Proximal Gradient Descent (ISTA):** Using the proximal operator (Soft-Thresholding) to efficiently achieve sparsity.
+3. **Frank-Wolfe (Conditional Gradient):** Optimization on an $L_1$-ball via linear minimization, ideal for problems with constraints.
+* *Research Insight:* Visual comparison of how each method recovers the original sparse coefficient vector. It has been demonstrated that the Proximal method outperforms the Subgradient method in terms of convergence rate and quality of feature structure recovery.
+
+### 12-Advanced-Optimization-Benchmarking
+* **Comparative Optimizer Suite** — A benchmark for testing first- and second-order algorithms.
+* *Implemented methods:*
+1. **GD with Wolfe Line Search:** Gradient descent with an adaptive step size that guarantees the Wolfe conditions.
+2. **Newton's Method:** Second-order optimization using the direct Hessian inverse.
+3. **BFGS (Manual Implementation):** Implementation of the quasi-Newton method with inverse Hessian updating.
+4. **SciPy Benchmarking:** Comparison of manual implementations with optimized solvers (`BFGS`, `L-BFGS-B`).
+* *Research Insight:* The benchmark clearly demonstrates that in high-dimensional problems (Log-Barrier, N=100), second-order and quasi-Newton methods show exponentially greater efficiency compared to first-order methods, converging in a significantly smaller number of iterations.
+
 ---
 
 ## 🛠 Tech Stack
