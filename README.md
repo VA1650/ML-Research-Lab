@@ -81,6 +81,7 @@ is_active_community: 0.0000
 * **MNIST CNN Study:** Comparative analysis of optimizers (Adam vs. SGD) and architectural scalability.
 * **MNIST CNN & Real-Time** Inference Study: Comparative analysis of optimizers and a real-time digit recognition pipeline via OpenCV webcam stream.
 * **Auto MPG Prediction:** Multivariate regression analysis focused on fuel efficiency modeling.
+* **Heart Disease Classification Pipeline** — Medical screening of cardiovascular risks. Implemented using `Sklearn Pipeline` and `ColumnTransformer`. The architecture completely isolates the training context from the test one (`train/test leakage prevention`), performs dynamic encoding of categorical features via `OneHotEncoder` with protection against unknown values ​​(`handle_unknown='ignore'`), and implements regularized logistic inference.
 
 ### 03-Computer-Vision-Basics
 * Fundamental image processing experiments and basic spatial transformations.
