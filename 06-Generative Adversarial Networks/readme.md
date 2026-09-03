@@ -13,7 +13,7 @@ A collection of Generative Adversarial Networks (GAN) experiments focusing on im
 * **Objective:** Automating the creation of 64x64 pixel-art characters.
 * **The Challenge:** Handling strict pixel constraints and maintaining anatomical consistency (arms, legs, head positions) in the generated layout.
 * **Results:** The model learned to distribute color clusters corresponding to typical Minecraft skin patterns.
-
+* **More info:** https://telegra.ph/Ot-nulevogo-sloya-do-conditional-GAN-kak-ya-obuchala-nejroset-generirovat-skiny-dlya-Minecraft-09-03
 ---
 
 ## 🛠 Tech Stack
